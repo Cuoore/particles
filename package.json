@@ -1,0 +1,31 @@
+{
+  "name": "cuoore-particles",
+  "version": "0.1.0-0",
+  "description": "cuoore custom elements",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@storybook/addon-notes": "^5.0.6",
+    "@storybook/html": "^5.0.6",
+    "@storybook/theming": "^5.0.6",
+    "babel-loader": "^8.0.5",
+    "lit-html": "^1.0.0",
+    "prettier": "^1.16.4"
+  },
+  "scripts": {
+    "start": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cuoore/particles.git"
+  },
+  "keywords": [],
+  "author": "Javier López de Ancos",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/Cuoore/particles/issues"
+  },
+  "homepage": "https://github.com/Cuoore/particles#readme"
+}
