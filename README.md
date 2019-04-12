@@ -1,6 +1,4 @@
-![logo](./logo/logo.jpeg)
-
-
+![logo](./logo/logo.png)
 
 # Particles
 
