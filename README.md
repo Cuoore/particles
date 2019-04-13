@@ -15,3 +15,7 @@ custom elements to cuoore library
 ## Development
 
 `npm start`
+
+## Snippets
+
+[Snippets](./snippets/snippets.md)
