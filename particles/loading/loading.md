@@ -6,36 +6,68 @@
 <cuoore-loading></cuoore-loading>
 ```
 
+## Theme
+
+Review global theme variables in [theme section](../../theme/theme.md)
+
+You only need add that structure to your theme.
+
+```css
+cuoore-loading {
+  --loading---width: 200px;
+  --loading--small---width: 50px;
+  --loading--big---width: 400px;
+  --loading---height: 200px;
+  --loading--small---height: 50px;
+  --loading--big---height: 400px;
+  --loading-primary---opacity: 0.8;
+  --loading-secondary---opacity: 0.2;
+  --loading-primary---color: var(--color-primary);
+  --loading-secondary---color: var(--color-secondary);
+}
+```
+
 ## Attributes
 
-| Attribute        | Type   | Description            | Default |
-| ---------------- | ------ | ---------------------- | ------- |
-| running          | String | Play loading animation | true    |
-| primaryColor     | String | Animation color        | #000000 |
-| secondaryColor   | String | Back shadow color      | #000000 |
-| width            | String | Width for loading      | 200px   |
-| height           | String | Height for loading     | 200px   |
-| primaryOpacity   | String | Animation opacity      | 1       |
-| secondaryOpacity | String | Back shadow opacity    | 0.4     |
-| speed            | String | Animation Speed        | 0.5     |
+### running
+
+Manage if loading is running.
+
+**Type** `<String>`
+
+**Default** `false`
+
+### speed
+
+Manage the loading animation speed.
+
+**Type** `<String>`
+
+**Default** `0.8`
 
 ## Examples
 
-### Custom colors
+### Default running true
 
 ```html
-<cuoore-loading primaryColor="#B21F2E" secondaryColor="#FFDBA9" secondaryOpacity="0.4" running="true"> </cuoore-loading>
+<cuoore-loading running="true"> </cuoore-loading>
 ```
 
-### Custom opacity
+### Custom Sizes
+
+You need declare a class in loading component to select the different sizes
+
+`small`
+`big`
 
 ```html
-<cuoore-loading
-  primaryColor="#B21F2E"
-  secondaryColor="#FFDBA9"
-  primaryOpacity="0.5"
-  secondaryOpacity="0.1"
-  running="true"
->
-</cuoore-loading>
+<cuoore-loading class="small" running="true"> </cuoore-loading>
+<cuoore-loading running="true"> </cuoore-loading>
+<cuoore-loading class="big" running="true"> </cuoore-loading>
+```
+
+### Custom speed
+
+```html
+<cuoore-loading speed="0.7" running="true"> </cuoore-loading>
 ```
