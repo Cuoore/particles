@@ -2,6 +2,10 @@
 
 custom elements to cuoore library
 
+## Theme
+
+[Theme](themes/theme.md)
+
 ## Particles
 
 - [Loading](particles/loading/loading.md)

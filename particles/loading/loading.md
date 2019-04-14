@@ -8,7 +8,7 @@
 
 ## Theme
 
-Review global theme variables in [theme section](../../theme/theme.md)
+Review global theme variables in [theme section](../../themes/theme.md)
 
 You only need add that structure to your theme.
 

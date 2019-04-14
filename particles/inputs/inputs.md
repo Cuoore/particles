@@ -2,7 +2,7 @@
 
 ## Theme
 
-Review global theme variables in [theme section](../../theme/theme.md)
+Review global theme variables in [theme section](../../themes/theme.md)
 
 You need set up this variables into your root custom properties scope.
 
