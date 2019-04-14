@@ -4,9 +4,9 @@ custom elements to cuoore library
 
 ## Particles
 
-- [Loading](./Particles/Loading/Loading.md)
-- [Inputs](./Particles/inputs/inputs.md)
-  - [Input Text](./Particles/inputs/inputs.md#input-type-text)
+- [Loading](particles/loading/loading.md)
+- [Inputs](particles/inputs/inputs.md)
+  - [Input Text](particles/inputs/inputs.md#input-type-text)
 
 ## Install
 
