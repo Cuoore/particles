@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/html'
 
 import './buttons.particle'
-import notes from '../inputs/inputs.md'
+import notes from './buttons.md'
 
 const inputStyle = 'display:block;margin-bottom:20px;width:40%;'
 

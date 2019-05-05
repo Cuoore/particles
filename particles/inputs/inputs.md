@@ -1,10 +1,16 @@
 # Inputs
 
+
+
 ## Theme
+
+
 
 Review global theme variables in [theme section](../../themes/theme.md)
 
 You need set up this variables into your root custom properties scope.
+
+
 
 ```css
 :root {
@@ -31,13 +37,19 @@ You need set up this variables into your root custom properties scope.
 }
 ```
 
+
+
 ## Input type text
+
+
 
 ### Declaration
 
 ```html
 <cuoore-input-text></cuoore-input-text>
 ```
+
+
 
 ### Theme
 
@@ -62,7 +74,11 @@ cuoore-input-text {
 }
 ```
 
+
+
 ## Attributes
+
+
 
 ### placeholder
 
@@ -72,7 +88,11 @@ Manage the placeholder when the input is empty.
 
 **Default** `""`
 
+
+
 ## Examples
+
+
 
 ### Default with placeholder
 
