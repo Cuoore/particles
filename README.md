@@ -11,6 +11,7 @@ custom elements to cuoore library
 - [Loading](particles/loading/loading.md)
 - [Inputs](particles/inputs/inputs.md)
   - [Input Text](particles/inputs/inputs.md#input-type-text)
+- [Buttons](particles/buttons/buttons.md)
 
 ## Install
 

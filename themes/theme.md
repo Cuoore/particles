@@ -85,3 +85,14 @@ In root scope we have some subscopes defined:
   }
 ```
 
+
+
+## Examples	
+
+
+
+### Caramel
+
+The custom theme for cuoore
+
+[Caramel theme css file](./caramel/theme.css)
