@@ -61,6 +61,7 @@ class InputText extends HTMLElement {
         height: var(--input-text--focus---height, 26px);
         border: var(--input-text--focus---border, 4px solid grey);
         outline: none;
+        transition: var(--input-text--focus---transition);
       }
       :host input::placeholder {
         color: var(--input-text--placeholder---color, black);
