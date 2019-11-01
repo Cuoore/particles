@@ -1,0 +1,251 @@
+:root {
+  --color--primary: #b21f2e;
+  --color--primary--OOI: #9a0f1e;
+  --color--primary--OII: #850a16;
+  --color--primary--III: #e6a27c;
+  --color--secondary: #ffdba9;
+  --color--secondary--OOI: #fccd8b;
+  --color--secondary--OII: #f1bb70;
+  --color--secondary--III: #d9a55c;
+  --color--secondary--OIV: #f9cc98;
+  --color--tertiary: #5e3a08;
+  --color--tertiary--OOI: #bea47e;
+  --color--tertiary--OII: #442a05;
+  --color--tertiary--III: #392200;
+  --color--black: #000000;
+  --font-family--primary: 'Roboto', sans-serif;
+  --font-size--OOI: 8px;
+  --font-size--OII: 10px;
+  --font-size--III: 12px;
+  --font-size--OIV: 14px;
+  --font-size--OOV: 16px;
+  --font-size--OVI: 18px;
+  --font-size: var(--font-size--OVI);
+  --border-radius: 18px;
+  --line-weight--fine: 1px;
+  --line-weight--semi-bold: 2px;
+  --line-weight--bold: 4px;
+  --input---width: 100%;
+  --input---height: 30px;
+  --input---border-weight: var(--line-weight--fine);
+  --input---border: var(--input---border-weight) solid var(--color--primary);
+  --input---border-radius: var(--border-radius);
+  --input---padding: 5px 10px;
+  --input---color: var(--color--primary);
+  --input---background: transparent;
+  --input---font-family: var(--font-family--primary);
+  --input---font-size: var(--font-size);
+  --input--placeholder---font-style: italic;
+  --input--placeholder---color: var(--color--secondary--III);
+  --input--focus---width: calc(
+    calc(var(--input---width) + calc(var(--input---border-weight) * 2)) - calc(var(--input--focus---border-weight) * 2)
+  );
+  --input--focus---height: calc(
+    calc(var(--input---height) + calc(var(--input---border-weight) * 2)) - calc(var(--input--focus---border-weight) * 2)
+  );
+  --input--focus---border-weight: var(--line-weight--bold);
+  --input--focus---border: var(--input--focus---border-weight) solid var(--color--primary);
+}
+
+cuoore-input-text {
+  --input-text---width: var(--input---width);
+  --input-text---height: var(--input---height);
+  --input-text---border: var(--input---border);
+  --input-text---border-radius: var(--input---border-radius);
+  --input-text---padding: var(--input---padding);
+  --input-text---color: var(--input---color);
+  --input-text---background: var(--input---background);
+  --input-text---font-family: var(--input---font-family);
+  --input-text---font-size: var(--input---font-size);
+  --input-text--placeholder---color: var(--input--placeholder---color);
+  --input-text--placeholder---font-style: var(--input--placeholder---font-style);
+  --input-text--focus---border: var(--input--focus---border);
+  --input-text--focus---width: var(--input--focus---width);
+  --input-text--focus---height: var(--input--focus---height);
+}
+
+cuoore-button {
+  --button---height: 60px;
+  --button---min-width: 120px;
+  --button---padding-top: 15px;
+  --button---padding-bottom: 15px;
+  --button---padding-left: 23px;
+  --button---padding-right: 23px;
+  --button---border-radius: calc(var(--border-radius) - 6px);
+  --button---border: var(--line-weight--fine) solid var(--color--secondary--OOI);
+  --button---color: var(--color--tertiary);
+  --button---font-size: var(--font-size--OIV);
+  --button---font-family: var(--font-family--primary);
+  --button---text-transform: uppercase;
+  --button---font-weight: 600;
+  --button---box-shadow: none;
+  --button---background: var(--color--secondary--OOI);
+  --button--small---height: 40px;
+  --button--small---min-width: 95px;
+  --button--small---padding-top: 2px;
+  --button--small---padding-bottom: 2px;
+  --button--small---padding-left: 15px;
+  --button--small---padding-right: 15px;
+  --button--small---font-size: var(--font-size--III);
+  --button--big---height: 70px;
+  --button--big---min-width: 150px;
+  --button--big---padding-top: 10px;
+  --button--big---padding-bottom: 10px;
+  --button--big---padding-left: 35px;
+  --button--big---padding-right: 35px;
+  --button--big---font-size: var(--font-size--OIV);
+  --button--hover---color: var(--color--tertiary--OII);
+  --button--hover---border: var(--line-weight--fine) solid var(--color--secondary--OII);
+  --button--hover---box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1);
+  --button--hover---background: var(--color--secondary--OII);
+  --button--hover---transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  --button--hover---cursor: pointer;
+  --button--active---background: var(--color--secondary--III);
+  --button--active---box-shadow: none;
+  --button--active---transition: all 0.2s ease-in-out;
+  --button--active---color: var(--color--tertiary--OII);
+  --button--primary---color: var(--color--secondary);
+  --button--primary---background: var(--color--primary);
+  --button--primary---border: var(--line-weight--fine) solid var(--color--primary);
+  --button--primary---box-shadow: none;
+  --button--primary--hover---color: var(--color--secondary);
+  --button--primary--hover---background: var(--color--primary--OOI);
+  --button--primary--hover---box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1);
+  --button--primary--hover---border: var(--line-weight--fine) solid var(--color--primary--OII);
+  --button--primary--hover---transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  --button--primary--active---color: var(--button--primary---color);
+  --button--primary--active---background: var(--color--primary--OII);
+  --button--primary-outline---color: var(--color--primary);
+  --button--primary-outline---border: var(--line-weight--fine) solid var(--color--primary);
+  --button--primary-outline--hover---color: var(--color--primary--OOI);
+  --button--primary-outline--hover---border: var(--line-weight--bold) solid var(--color--primary--OOI);
+  --button--primary-outline---padding-top: var(--button---padding-top);
+  --button--primary-outline---padding-bottom: var(--button---padding-bottom);
+  --button--primary-outline---padding-left: var(--button---padding-left);
+  --button--primary-outline---padding-right: var(--button---padding-right);
+  --button--primary-outline--hover---padding-top: calc(
+    var(--button---padding-top) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--primary-outline--hover---padding-bottom: calc(
+    var(--button--primary-outline---padding-bottom) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--primary-outline--hover---padding-left: calc(
+    var(--button--primary-outline---padding-left) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--primary-outline--hover---padding-right: calc(
+    var(--button--primary-outline---padding-right) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--primary-outline--active---border: var(--line-weight--semi-bold) solid var(--color--primary--OII);
+  --button--primary-outline--active---color: var(--color--primary--OII);
+  --button--primary-outline--big---padding-top: var(--button--big---padding-top);
+  --button--primary-outline--big---padding-bottom: var(--button--big---padding-bottom);
+  --button--primary-outline--big---padding-left: var(--button--big---padding-left);
+  --button--primary-outline--big---padding-right: var(--button--big---padding-right);
+  --button--primary-outline--big--hover---padding-top: calc(
+    var(--button--primary-outline--big---padding-top) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--primary-outline--big--hover---padding-bottom: calc(
+    var(--button--primary-outline--big---padding-bottom) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--primary-outline--big--hover---padding-left: calc(
+    var(--button--primary-outline--big---padding-left) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--primary-outline--big--hover---padding-right: calc(
+    var(--button--primary-outline--big---padding-right) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--primary-outline--small---padding-top: var(--button--small---padding-top);
+  --button--primary-outline--small---padding-bottom: var(--button--small---padding-bottom);
+  --button--primary-outline--small---padding-left: var(--button--small---padding-left);
+  --button--primary-outline--small---padding-right: var(--button--small---padding-right);
+  --button--primary-outline--small--hover---padding-top: calc(
+    var(--button--primary-outline--small---padding-top) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--primary-outline--small--hover---padding-bottom: calc(
+    var(--button--primary-outline--small---padding-bottom) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--primary-outline--small--hover---padding-left: calc(
+    var(--button--primary-outline--small---padding-left) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--primary-outline--small--hover---padding-right: calc(
+    var(--button--primary-outline--small---padding-right) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--secondary---color: var(--color--secondary);
+  --button--secondary---background: var(--color--tertiary);
+  --button--secondary---border: var(--line-weight--fine) solid var(--color--tertiary);
+  --button--secondary---box-shadow: none;
+  --button--secondary--hover---color: var(--color--secondary);
+  --button--secondary--hover---background: var(--color--tertiary--OII);
+  --button--secondary--hover---box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1);
+  --button--secondary--hover---border: var(--button--secondary---border);
+  --button--secondary--hover---transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  --button--secondary--active---color: var(--button--primary---color);
+  --button--secondary--active---background: var(--color--tertiary--III);
+
+  --button--secondary-outline---color: var(--color--tertiary);
+  --button--secondary-outline---border: var(--line-weight--fine) solid var(--button--secondary-outline---color);
+  --button--secondary-outline--hover---color: var(--color--tertiary--OII);
+  --button--secondary-outline--hover---border: var(--line-weight--bold) solid var(--color--tertiary--OII);
+  --button--secondary-outline---padding-top: var(--button---padding-top);
+  --button--secondary-outline---padding-bottom: var(--button---padding-bottom);
+  --button--secondary-outline---padding-left: var(--button---padding-left);
+  --button--secondary-outline---padding-right: var(--button---padding-right);
+  --button--secondary-outline--hover---padding-top: calc(
+    var(--button---padding-top) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--secondary-outline--hover---padding-bottom: calc(
+    var(--button--secondary-outline---padding-bottom) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--secondary-outline--hover---padding-left: calc(
+    var(--button--secondary-outline---padding-left) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--secondary-outline--hover---padding-right: calc(
+    var(--button--secondary-outline---padding-right) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--secondary-outline--active---border: var(--line-weight--semi-bold) solid var(--color--tertiary--III);
+  --button--secondary-outline--active---color: var(--color--tertiary--III);
+  --button--secondary-outline--big---padding-top: var(--button--big---padding-top);
+  --button--secondary-outline--big---padding-bottom: var(--button--big---padding-bottom);
+  --button--secondary-outline--big---padding-left: var(--button--big---padding-left);
+  --button--secondary-outline--big---padding-right: var(--button--big---padding-right);
+  --button--secondary-outline--big--hover---padding-top: calc(
+    var(--button--secondary-outline--big---padding-top) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--secondary-outline--big--hover---padding-bottom: calc(
+    var(--button--secondary-outline--big---padding-bottom) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--secondary-outline--big--hover---padding-left: calc(
+    var(--button--secondary-outline--big---padding-left) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--secondary-outline--big--hover---padding-right: calc(
+    var(--button--secondary-outline--big---padding-right) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--secondary-outline--small---padding-top: var(--button--small---padding-top);
+  --button--secondary-outline--small---padding-bottom: var(--button--small---padding-bottom);
+  --button--secondary-outline--small---padding-left: var(--button--small---padding-left);
+  --button--secondary-outline--small---padding-right: var(--button--small---padding-right);
+  --button--secondary-outline--small--hover---padding-top: calc(
+    var(--button--secondary-outline--small---padding-top) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--secondary-outline--small--hover---padding-bottom: calc(
+    var(--button--secondary-outline--small---padding-bottom) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--secondary-outline--small--hover---padding-left: calc(
+    var(--button--secondary-outline--small---padding-left) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+  --button--secondary-outline--small--hover---padding-right: calc(
+    var(--button--secondary-outline--small---padding-right) - calc(var(--line-weight--bold) - var(--line-weight--fine))
+  );
+}
+
+cuoore-loading {
+  --loading---width: 100px;
+  --loading--small---width: 50px;
+  --loading--big---width: 150px;
+  --loading---height: 100px;
+  --loading--small---height: 50px;
+  --loading--big---height: 150px;
+  --loading-primary---opacity: 0.8;
+  --loading-secondary---opacity: 0.2;
+  --loading-primary---color: var(--color--primary);
+  --loading-secondary---color: var(--color--secondary);
+}
