@@ -5,11 +5,11 @@ addParameters({
   options: {
     theme,
     showNav: true,
-    showPanel: false,
+    showPanel: true,
   },
 })
 
-const req = require.context('../particles', true, /\.stories\.js$/)
+const req = require.context('../src/particles', true, /\.stories\.js$/)
 function loadStories() {
   req.keys().forEach(filename => req(filename))
 }
