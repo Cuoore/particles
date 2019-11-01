@@ -5,13 +5,13 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@storybook/addon-notes": "^5.0.11",
-    "@storybook/html": "^5.0.11",
-    "@storybook/theming": "^5.0.11",
-    "babel-loader": "^8.0.5",
-    "lit-html": "^1.0.0",
-    "prettier": "^1.16.4"
+    "@babel/core": "^7.6.4",
+    "@storybook/addon-notes": "^5.2.5",
+    "@storybook/html": "^5.2.5",
+    "@storybook/theming": "^5.2.5",
+    "babel-loader": "^8.0.6",
+    "lit-html": "^1.1.2",
+    "prettier": "^1.18.2"
   },
   "scripts": {
     "start": "start-storybook -p 6006",
