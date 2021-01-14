@@ -26,25 +26,24 @@
   --line-weight--semi-bold: 2px;
   --line-weight--bold: 4px;
   --input---width: 100%;
-  --input---height: 30px;
+  --input---height: 50px;
   --input---border-weight: var(--line-weight--fine);
   --input---border: var(--input---border-weight) solid var(--color--primary);
   --input---border-radius: var(--border-radius);
-  --input---padding: 5px 10px;
+  --input---padding-vertical: 5px;
+  --input---padding: var(--input---padding-vertical) 10px;
   --input---color: var(--color--primary);
   --input---background: transparent;
   --input---font-family: var(--font-family--primary);
   --input---font-size: var(--font-size);
   --input--placeholder---font-style: italic;
   --input--placeholder---color: var(--color--secondary--III);
-  --input--focus---width: calc(
-    calc(var(--input---width) + calc(var(--input---border-weight) * 2)) - calc(var(--input--focus---border-weight) * 2)
-  );
-  --input--focus---height: calc(
-    calc(var(--input---height) + calc(var(--input---border-weight) * 2)) - calc(var(--input--focus---border-weight) * 2)
-  );
   --input--focus---border-weight: var(--line-weight--bold);
   --input--focus---border: var(--input--focus---border-weight) solid var(--color--primary);
+  --input--focus---padding: calc(
+      var(--input---padding-vertical) - calc(var(--input--focus---border-weight) - var(--input---border-weight))
+    )
+    10px;
 }
 
 cuoore-input-text {
@@ -60,8 +59,7 @@ cuoore-input-text {
   --input-text--placeholder---color: var(--input--placeholder---color);
   --input-text--placeholder---font-style: var(--input--placeholder---font-style);
   --input-text--focus---border: var(--input--focus---border);
-  --input-text--focus---width: var(--input--focus---width);
-  --input-text--focus---height: var(--input--focus---height);
+  --input-text--focus---padding: var(--input--focus---padding);
 }
 
 cuoore-button {

@@ -46,6 +46,7 @@ class InputText extends HTMLElement {
     this.template = `
       <style>
       :host input {
+        box-sizing: border-box;
         width: var(--input-text---width, 100%);
         height: var(--input-text---height, 30px);
         border: var(--input-text---border, 1px solid grey);
@@ -57,8 +58,7 @@ class InputText extends HTMLElement {
         font-size: var(--input-text---font-size, 16px);
       }
       :host input:focus {
-        width: var(--input-text--focus---width, calc(calc(100% + 2px)-8px));
-        height: var(--input-text--focus---height, 26px);
+        padding: var(--input-text--focus---padding);
         border: var(--input-text--focus---border, 4px solid grey);
         outline: none;
         transition: var(--input-text--focus---transition);

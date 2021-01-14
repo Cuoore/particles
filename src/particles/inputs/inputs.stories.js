@@ -1,9 +1,9 @@
+import './inputText.particle'
+
+import notes from './inputs.md'
 import { storiesOf } from '@storybook/html'
 
-import './inputText.particle'
-import notes from './inputs.md'
-
-const inputStyle = 'display:block;margin-bottom:20px;width:40%;'
+const inputStyle = 'display:block;margin-bottom:20px;width:100%;'
 
 storiesOf('Inputs', module).add(
   'Text',
