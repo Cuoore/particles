@@ -1,9 +1,9 @@
+import './loading.particle'
+
+import notes from './loading.md'
 import { storiesOf } from '@storybook/html'
 
-import './loading.particle'
-import notes from './loading.md'
-
-storiesOf('Loading', module)
+storiesOf('Feedback|Loading', module)
   .add(
     'default',
     () =>
