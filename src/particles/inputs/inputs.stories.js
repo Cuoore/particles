@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/html'
 
 const inputStyle = 'display:block;margin-bottom:20px;width:100%;'
 
-storiesOf('Inputs', module).add(
+storiesOf('Formulary|Inputs', module).add(
   'Text',
   () =>
     `
