@@ -4,6 +4,6 @@
 
 ### Cuoore custom element
 
-```
+```shell
 cuoorece
 ```
