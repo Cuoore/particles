@@ -11,6 +11,7 @@ const attributes = {
   },
   size: {
     name: 'size',
+    values: ['big', 'normal', 'small'],
     default: 'normal',
   },
 }
@@ -52,10 +53,10 @@ class Button extends HTMLElement {
 
   setFontSizeBySize() {
     switch (this.size) {
-      case 'small':
+      case attributes.size.values[2]:
         this.fontSize = 'var(--button--small---font-size)'
         break
-      case 'big':
+      case attributes.size.values[0]:
         this.fontSize = 'var(--button--big---font-size)'
         break
       default:
@@ -66,10 +67,10 @@ class Button extends HTMLElement {
 
   setHeightBySize() {
     switch (this.size) {
-      case 'small':
+      case attributes.size.values[2]:
         this.height = 'var(--button--small---height)'
         break
-      case 'big':
+      case attributes.size.values[0]:
         this.height = 'var(--button--big---height)'
         break
       default:
@@ -80,10 +81,10 @@ class Button extends HTMLElement {
 
   setMinWidthBySize() {
     switch (this.size) {
-      case 'small':
+      case attributes.size.values[2]:
         this.minWidth = 'var(--button--small---min-width)'
         break
-      case 'big':
+      case attributes.size.values[0]:
         this.minWidth = 'var(--button--big---min-width)'
         break
       default:
@@ -94,7 +95,7 @@ class Button extends HTMLElement {
 
   setPaddingBySize() {
     switch (this.size) {
-      case 'small':
+      case attributes.size.values[2]:
         this.padding = {
           default:
             'var(--button--small---padding-top) var(--button--small---padding-right) var(--button--small---padding-bottom) var(--button--small---padding-left)',
@@ -116,7 +117,7 @@ class Button extends HTMLElement {
           },
         }
         break
-      case 'big':
+      case attributes.size.values[0]:
         this.padding = {
           default:
             'var(--button--big---padding-top) var(--button--big---padding-right) var(--button--big---padding-bottom) var(--button--big---padding-left)',
@@ -174,119 +175,122 @@ class Button extends HTMLElement {
   setTemplate() {
     this.template = `
       <style>
-      :host button {
-        height: ${this.height};
-        min-width: ${this.minWidth};
-        padding: ${this.padding.default};
-        background: var(--button---background);
-        border: var(--button---border);
-        border-radius: var(--button---border-radius);
-        color: var(--button---color, black);
-        font-family: var(--button---font-family);
-        font-size: ${this.fontSize};
-        font-weight: var(--button---font-weight);
-        text-transform: var(--button---text-transform);
-        box-shadow: var(--button---box-shadow);
-      }
-      :host button:hover {
-        cursor: var(--button--hover---cursor);
-        color: var(--button--hover---color);
-        border: var(--button--hover---border);
-        background: var(--button--hover---background);
-        transition: var(--button--hover---transition);
-        box-shadow: var(--button--hover---box-shadow);
-      }
-      :host button:active {
-        background: var(--button--active---background);
-        color: var(--button--active---color);
-        box-shadow: var(--button--active---box-shadow);
-        transition: var(--button--active---transition);
-      }
-      :host button:focus {
-        outline: none;
-      }
-      :host button.primary {
-        padding: ${this.padding.primary};
-        color: var(--button--primary---color);
-        background: var(--button--primary---background);
-        border: var(--button--primary---border);
-        box-shadow: var(--button--primary---box-shadow);
-      }
-      :host button.primary:hover {
-        padding: ${this.padding.hover.primary}
-        color: var(--button--primary--hover---color);
-        background: var(--button--primary--hover---background);
-        border: var(--button--primary--hover---border);
-        transition: var(--button--primary--hover---transition);
-        box-shadow: var(--button--primary--hover---box-shadow);
-      }
-      :host button.primary:active {
-        color: var(--button--primary--active---color);
-        background: var(--button--primary--active---background);
-        transition: var(--button--primary--active---transition);
-        box-shadow: var(--button--primary--active---box-shadow);
-      }
-      :host button.primary-outline {
-        padding: ${this.padding.primaryOutline};
-        color: var(--button--primary-outline---color);
-        background: var(--button--primary-outline---background);
-        border: var(--button--primary-outline---border);
-        box-shadow: var(--button--primary-outline---box-shadow);
-      }
-      :host button.primary-outline:hover {
-        padding: ${this.padding.hover.primaryOutline};
-        color: var(--button--primary-outline--hover---color);
-        background: var(--button--primary-outline--hover---background);
-        border: var(--button--primary-outline--hover---border);
-        transition: var(--button--primary-outline--hover---transition);
-        box-shadow: var(--button--primary-outline--hover---box-shadow);
-      }
-      :host button.primary-outline:active {
-        color:  var(--button--primary-outline--active---color);
-        border: var(--button--primary-outline--active---border);
-      }
-      :host button.secondary {
-        padding: ${this.padding.secondary};
-        color: var(--button--secondary---color);
-        background: var(--button--secondary---background);
-        border: var(--button--secondary---border);
-        box-shadow: var(--button--secondary---box-shadow);
-      }
-      :host button.secondary:hover {
-        padding: ${this.padding.hover.secondary}
-        color: var(--button--secondary--hover---color);
-        background: var(--button--secondary--hover---background);
-        border: var(--button--secondary--hover---border);
-        transition: var(--button--secondary--hover---transition);
-        box-shadow: var(--button--secondary--hover---box-shadow);
-      }
-      :host button.secondary:active {
-        color: var(--button--secondary--active---color);
-        background: var(--button--secondary--active---background);
-        transition: var(--button--secondary--active---transition);
-        box-shadow: var(--button--secondary--active---box-shadow);
-      }
-      :host button.secondary-outline {
-        padding: ${this.padding.primaryOutline};
-        color: var(--button--secondary-outline---color);
-        background: var(--button--secondary-outline---background);
-        border: var(--button--secondary-outline---border);
-        box-shadow: var(--button--secondary-outline---box-shadow);
-      }
-      :host button.secondary-outline:hover {
-        padding: ${this.padding.hover.primaryOutline};
-        color: var(--button--secondary-outline--hover---color);
-        background: var(--button--secondary-outline--hover---background);
-        border: var(--button--secondary-outline--hover---border);
-        transition: var(--button--secondary-outline--hover---transition);
-        box-shadow: var(--button--secondary-outline--hover---box-shadow);
-      }
-      :host button.secondary-outline:active {
-        color:  var(--button--secondary-outline--active---color);
-        border: var(--button--secondary-outline--active---border);
-      }
+        :host button {
+          height: ${this.height};
+          min-width: ${this.minWidth};
+          padding: ${this.padding.default};
+          background: var(--button---background);
+          border: var(--button---border);
+          border-radius: var(--button---border-radius);
+          color: var(--button---color, black);
+          font-family: var(--button---font-family);
+          font-size: ${this.fontSize};
+          font-weight: var(--button---font-weight);
+          text-transform: var(--button---text-transform);
+          box-shadow: var(--button---box-shadow);
+        }
+        :host button:hover {
+          cursor: var(--button--hover---cursor);
+          color: var(--button--hover---color);
+          border: var(--button--hover---border);
+          background: var(--button--hover---background);
+          transition: var(--button--hover---transition);
+          box-shadow: var(--button--hover---box-shadow);
+        }
+        :host button:active {
+          background: var(--button--active---background);
+          color: var(--button--active---color);
+          box-shadow: var(--button--active---box-shadow);
+          transition: var(--button--active---transition);
+        }
+        :host button:focus {
+          outline: none;
+        }
+        :host button.primary {
+          padding: ${this.padding.primary};
+          color: var(--button--primary---color);
+          background: var(--button--primary---background);
+          border: var(--button--primary---border);
+          box-shadow: var(--button--primary---box-shadow);
+        }
+        :host button.primary:hover {
+          padding: ${this.padding.hover.primary}
+          color: var(--button--primary--hover---color);
+          background: var(--button--primary--hover---background);
+          border: var(--button--primary--hover---border);
+          transition: var(--button--primary--hover---transition);
+          box-shadow: var(--button--primary--hover---box-shadow);
+        }
+        :host button.primary:active {
+          color: var(--button--primary--active---color);
+          background: var(--button--primary--active---background);
+          transition: var(--button--primary--active---transition);
+          box-shadow: var(--button--primary--active---box-shadow);
+        }
+        :host button.primary-outline {
+          padding: ${this.padding.primaryOutline};
+          color: var(--button--primary-outline---color);
+          background: var(--button--primary-outline---background);
+          border: var(--button--primary-outline---border);
+          box-shadow: var(--button--primary-outline---box-shadow);
+        }
+        :host button.primary-outline:hover {
+          padding: ${this.padding.hover.primaryOutline};
+          color: var(--button--primary-outline--hover---color);
+          background: var(--button--primary-outline--hover---background);
+          border: var(--button--primary-outline--hover---border);
+          transition: var(--button--primary-outline--hover---transition);
+          box-shadow: var(--button--primary-outline--hover---box-shadow);
+        }
+        :host button.primary-outline:active {
+          color:  var(--button--primary-outline--active---color);
+          border: var(--button--primary-outline--active---border);
+        }
+        :host button.secondary {
+          padding: ${this.padding.secondary};
+          color: var(--button--secondary---color);
+          background: var(--button--secondary---background);
+          border: var(--button--secondary---border);
+          box-shadow: var(--button--secondary---box-shadow);
+        }
+        :host button.secondary:hover {
+          padding: ${this.padding.hover.secondary}
+          color: var(--button--secondary--hover---color);
+          background: var(--button--secondary--hover---background);
+          border: var(--button--secondary--hover---border);
+          transition: var(--button--secondary--hover---transition);
+          box-shadow: var(--button--secondary--hover---box-shadow);
+        }
+        :host button.secondary:active {
+          color: var(--button--secondary--active---color);
+          background: var(--button--secondary--active---background);
+          transition: var(--button--secondary--active---transition);
+          box-shadow: var(--button--secondary--active---box-shadow);
+        }
+        :host button.secondary-outline {
+          padding: ${this.padding.primaryOutline};
+          color: var(--button--secondary-outline---color);
+          background: var(--button--secondary-outline---background);
+          border: var(--button--secondary-outline---border);
+          box-shadow: var(--button--secondary-outline---box-shadow);
+        }
+        :host button.secondary-outline:hover {
+          padding: ${this.padding.hover.primaryOutline};
+          color: var(--button--secondary-outline--hover---color);
+          background: var(--button--secondary-outline--hover---background);
+          border: var(--button--secondary-outline--hover---border);
+          transition: var(--button--secondary-outline--hover---transition);
+          box-shadow: var(--button--secondary-outline--hover---box-shadow);
+        }
+        :host button.secondary-outline:active {
+          color:  var(--button--secondary-outline--active---color);
+          border: var(--button--secondary-outline--active---border);
+        }
       </style>
-      <button class="${this.type}">${this.label}</button>
+      <button
+        type="${this.type}">
+          ${this.label}
+      </button>
     `
   }
 

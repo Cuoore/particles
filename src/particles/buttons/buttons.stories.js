@@ -1,11 +1,11 @@
-import { storiesOf } from '@storybook/html'
-
 import './buttons.particle'
+
 import notes from './buttons.md'
+import { storiesOf } from '@storybook/html'
 
 const inputStyle = 'display:block;margin-top:40px;margin-left:40px;width:40%;'
 
-storiesOf('Buttons', module)
+storiesOf('Formulary|Buttons', module)
   .add(
     'Default',
     () =>
