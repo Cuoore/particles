@@ -20,6 +20,8 @@
   --font-size--OIV: 14px;
   --font-size--OOV: 16px;
   --font-size--OVI: 18px;
+  --font---weight--0IV: 400;
+  --font---weight--default: var(--font---weight--0IV);
   --font-size: var(--font-size--OVI);
   --border-radius: 18px;
   --line-weight--fine: 1px;
@@ -62,6 +64,28 @@ cuoore-input-text {
   --input-text--focus---padding: var(--input--focus---padding);
 }
 
+cuoore-label {
+  --label---font-family: var(--font-family--primary);
+  --label---font-size: var(--font-size--IV);
+  --label---font-weight: var(--font---weight--default);
+}
+
+cuoore-header-title {
+  --header-title---font-family: var(--font-family--primary);
+  --header-title--h1---font-size: var(--font-size--IV);
+  --header-title--h1---font-weight: var(--font---weight--default);
+  --header-title--h2---font-size: var(--font-size--IV);
+  --header-title--h2---font-weight: var(--font---weight--default);
+  --header-title--h3---font-size: var(--font-size--IV);
+  --header-title--h3---font-weight: var(--font---weight--default);
+  --header-title--h4---font-size: var(--font-size--IV);
+  --header-title--h4---font-weight: var(--font---weight--default);
+  --header-title--h5---font-size: var(--font-size--IV);
+  --header-title--h5---font-weight: var(--font---weight--default);
+  --header-title--h6---font-size: var(--font-size--IV);
+  --header-title--h6---font-weight: var(--font---weight--default);
+}
+
 cuoore-button {
   --button---height: 60px;
   --button---min-width: 120px;
@@ -69,7 +93,7 @@ cuoore-button {
   --button---padding-bottom: 15px;
   --button---padding-left: 23px;
   --button---padding-right: 23px;
-  --button---border-radius: calc(var(--border-radius) - 6px);
+  --button---border-radius: calc(var(--border-radius) + 27px);
   --button---border: var(--line-weight--fine) solid var(--color--secondary--OOI);
   --button---color: var(--color--tertiary);
   --button---font-size: var(--font-size--OIV);
