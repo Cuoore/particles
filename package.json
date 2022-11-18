@@ -7,7 +7,7 @@
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@storybook/addon-notes": "^5.2.5",
-    "@storybook/html": "^5.2.5",
+    "@storybook/html": "^6.5.13",
     "@storybook/theming": "^5.2.5",
     "babel-loader": "^8.0.6",
     "lit-html": "^1.1.2",
